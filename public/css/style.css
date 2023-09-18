@@ -1,0 +1,19 @@
+p {
+    margin: 10px 0px !important;
+}
+
+.login-container {
+    width: 400px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.edit-btn {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.fa-small {
+    font-size: 15px !important;
+}

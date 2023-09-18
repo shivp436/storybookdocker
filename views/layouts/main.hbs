@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storybook</title>
+
+    {{!-- Materialise CSS --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    {{!-- Font awesome --}}
+    <script src="https://use.fontawesome.com/861fc231f9.js"></script>
+
+    {{!-- Custom CSS --}}
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+    {{> _header}} {{!-- partials/_header.hbs --}}
+    {{> _add_btn}} 
+    <div class="container">
+        {{{body}}}
+    </div>
+
+    {{!-- Materialize JS --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    {{!-- CK Editor --}}
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+    
+    {{!-- Custom JS --}}
+    <script>
+        // Init Side Nav - in Materialize JS for Mobile view
+        const sidenav = document.querySelector('.sidenav');
+        M.Sidenav.init(sidenav);
+
+        // Init Select - in Materialize JS for dropdown
+        const selectStatus = document.querySelector('#status');
+        M.FormSelect.init(selectStatus);
+
+        // Init CK Editor
+        CKEDITOR.replace('body');
+    </script>
+</body>
+</html>
